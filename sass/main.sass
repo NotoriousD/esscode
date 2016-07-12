@@ -4,363 +4,621 @@
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
 @keyframes phone-shake
-  0%,25%,45%,65%,85%
+  0%, 25%, 45%, 65%, 85%
     transform: rotate(10deg)
-  15%,35%,55%,75%,95%,100%    
+  15%, 35%, 55%, 75%, 95%, 100%
     transform: rotate(-10deg)
 
+@keyframes move
+  0%
+    background-position: 0 60%, 0 50%
+  100%
+    background-position: 0 60%, 100% 50%
+
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+  color: #666
+
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+  color: #666
 
 //Custom Styles Here
 
 body
-    font-family: 'Roboto', sans-serif
+  font-family: Roboto, sans-serif
 
 .inner
-    min-width: 1200px
-    margin: 0 auto
+  min-width: 1200px
+  margin: 0 auto
+
 .top__menu
-    background-color: #212121
-    height: 70px
-    border-bottom: 5px solid #787878
-    width: 100%
-    img
-        cursor: pointer
+  background-color: #212121
+  height: 70px
+  border-bottom: 5px solid #787878
+  width: 100%
+  img
+    cursor: pointer
 
 .headhesive
-    width: 100%
-    position: fixed
-    background: #000
-    opacity: 0.7
-    z-index: 100
-    height: 70px
-    transform: translateY(-100%)
-    transition: .5s
+  width: 100%
+  position: fixed
+  background: #000
+  opacity: 0.7
+  z-index: 100
+  height: 70px
+  transform: translateY(-100%)
+  transition: .5s
 
 .headhesive--stick
-    transform: translate(0)
+  transform: translate(0)
 
 .logo
-    line-height: 70px
+  line-height: 70px
+
 .Contact
-    background: #fff
-    border-radius: 4px
-    cursor: pointer
-    position: relative
-    &:hover
-        background-color: #b9daf3
-        color: #fafafa
-        transition: .5s all
-    img
-        position: absolute
-        top: 12px
-        right: 98px
+  background: #fff
+  border-radius: 4px
+  cursor: pointer
+  position: relative
+  &:hover
+    background-color: #b9daf3
+    color: #fafafa
+    transition: .5s all
+  img
+    position: absolute
+    top: 12px
+    right: 98px
 
 .cont
-    color:  #212121
-    font-size: 16px
-    font-weight: 400
+  color: #212121
+  font-size: 16px
+  font-weight: 400
+  line-height: 40px
+  text-align: center
+  padding-left: 23px
+  &:hover
+    text-decoration: none
+    color: #000
+
+.nav
+  list-style: none
+  padding: 0
+  li
+    display: inline-block
+    position: relative
+    height: 40px
+    padding-left: 10px
+    padding-right: 10px
+    width: 128px
+    text-align: center
+
+.linav
+  text-decoration: none
+  color: #959393
+  font-size: 16px
+  font-weight: 400
+  line-height: 40px
+  text-align: left
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35)
+  &:after
+    content: ''
+    width: 10px
+    height: 2px
+    background: #fafafa
+    position: absolute
+    top: 39px
+    right: 57px
+    opacity: 0
+    border-radius: 50px
+    transition: .5s all
+    box-shadow: 0px -27px 62px 3px rgba(255, 255, 255, 1)
+  &:hover
+    text-decoration: none
+    color: #fafafa
+    transition: .7s all
+    &:after
+      opacity: 1
+
+.aphisha
+  position: relative
+  height: 610px
+  width: 100%
+  background: url('../img/slider_top.png')
+  background-repeat: no-repeat
+  background-size: cover
+  div
+    display: inline-block
+    padding-left: 50px
+    height: 400px
+    h1
+      color: #b9daf3
+      font-size: 66px
+      font-weight: 500
+      line-height: 100px
+      text-align: left
+      text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.35)
+    h2
+      color: #fafafa
+      font-size: 75px
+      font-weight: 400
+      line-height: 40px
+      text-align: left
+      margin-top: 95px
+      margin-bottom: 0
+    p
+      color: #b2b2b2
+      font-size: 12px
+      font-weight: 300
+      line-height: 50px
+      text-align: left
+    button
+      color: #424242
+      font-size: 26px
+      font-weight: 500
+      line-height: 40px
+      background-color: #fafafa
+      box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.35)
+      width: 250px
+      height: 50px
+      margin-top: 335px
+      border: 0
+      margin-left: 200px
+      text-align: center
+      &:hover
+        background-color: #b9daf3
+        transition: .5s all
+        color: #fafafa
+
+.about__top
+  background: url('../img/about.png')
+  height: 600px
+  background-repeat: no-repeat
+  background-size: cover
+  padding-top: 175px
+
+.about_us
+  background-color: rgba(255, 255, 255, 0.99)
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.35)
+  width: 1000px
+  height: 310px
+  padding: 15px
+  margin: 0 auto
+  h1
+    color: #424242
+    font-size: 51px
+    font-weight: 100
     line-height: 40px
     text-align: center
-    padding-left: 23px
-    &:hover
-        text-decoration: none
-        color: #000
-.nav
-    list-style: none
-    padding: 0
-    li
-        display: inline-block
-        position: relative
-        height: 40px
-        padding-left: 10px
-        padding-right: 10px
-        width: 128px
-        text-align: center
-       
-.linav
-    text-decoration: none
-    color:  #959393
-    font-size: 16px
-    font-weight: 400
-    line-height: 40px
+    margin-top: 10px
+  p
+    color: #212121
+    font-size: 14px
+    font-weight: 300
+    line-height: 21px
     text-align: left
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35)
-    &:after
-        content: ''
-        width: 10px
-        height: 2px
-        background: #fafafa
-        position: absolute
-        top: 39px
-        right: 57px
-        opacity: 0
-        border-radius: 50px
-        transition: .5s all
-        box-shadow: 0px -27px 62px 3px rgba(255,255,255,1);
-    &:hover
-        text-decoration: none
-        color:  #fafafa
-        transition: .7s all
-        &:after
-            opacity: 1
-            
-
-.slider_container
-    position: relative
-    height: 610px
-    width: 100%
-    background: url('../img/slider_top.png')
-    background-repeat: no-repeat
-    background-size: cover
-    div
-        display: inline-block
-        padding-left: 50px
-        height: 400px
-        h1
-            color:  #b9daf3
-            font-size: 66px
-            font-weight: 500
-            line-height: 100px
-            text-align: left
-            text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.35)
-        h2
-            color:  #fafafa
-            font-size: 75px
-            font-weight: 400
-            line-height: 40px
-            text-align: left
-            margin-top: 95px
-            margin-bottom: 0
-        p
-            color:  #b2b2b2
-            font-size: 12px
-            font-weight: 300
-            line-height: 50px
-            text-align: left
-        button
-            color:  #424242
-            font-size: 26px
-            font-weight: 500
-            line-height: 40px
-            text-align: left
-            background-color:  #fafafa
-            box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.35)
-            width: 250px
-            height: 50px
-            margin-top: 335px
-            border: 0
-            margin-left: 200px
-            text-align: center
-            &:hover
-                background-color: #b9daf3
-                transition: .5s all
-                color: #fafafa
-
-      
-.about__top
-    background: url('../img/about.png')
-    height: 600px
-    background-repeat: no-repeat
-    background-size: cover
-    padding-top: 175px
-                
-.about_us
-    background-color:  rgba(255, 255, 255, 0.99)
-    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.35)
-    width: 1000px
-    height: 310px
-    padding: 15px
-    margin: 0 auto
-    h1
-        color:  #424242
-        font-size: 51px
-        font-weight: 100
-        line-height: 40px
-        text-align: center
-        margin-top: 10px
-    p
-        color:  #212121
-        font-size: 14px
-        font-weight: 300
-        line-height: 21px
-        text-align: left
-        padding-left: 35px
-        padding-right: 35px
+    padding-left: 35px
+    padding-right: 35px
 
 .works__middle
-    background: rgba(142, 142, 142, 0.2)
-    padding-bottom: 30px
-
+  padding-bottom: 30px
+  background: #fafafa
 .works
-    h1
-        color:  #424242
-        font-size: 51px
-        font-weight: 100
-        line-height: 40px
-        text-align: center
+  h1
+    color: #424242
+    font-size: 51px
+    font-weight: 100
+    line-height: 40px
+    text-align: center
 
 .img_gallery
-    .item, .item::before, .item::after,
-    img,
+  .item, .item::before, .item::after,
+  img,
+  div
+    transition: all .4s
+
+  img
+    +size(100% auto)
+    display: block
+    height: 300px
+
+  .item
+    width: 33%
+    margin: 0 1px 1px 0
+    float: left
+    position: relative
+    overflow: hidden
+
+    &:hover
+      img
+        transform: scale(1.25)
+        opacity: 0.8
+
+      div
+        opacity: 1
+
+    &::before
+      content: ""
+      +position(absolute, 0 0 0 0)
+      z-index: 1
+
+    &::after
+      content: ""
+      +size(75px)
+      +position(absolute, 50% null null 50%)
+      z-index: 2
+      transform: translate(-50%, -50%)
+      opacity: 0
+      cursor: pointer
+      &:hover
+        background: rgba(185, 218, 243, 0.8)
+    &:hover
+      &::after
+        opacity: 1
+
+    &:hover
+      &::before
+        backdrop-filter: blur(10px) saturate(120%)
+
     div
-        transition: all .4s
+      background-color: rgba(0, 0, 0, 0.51)
+      position: absolute
+      height: 100%
+      width: 100%
+      left: 188px
+      top: 150px
+      z-index: 3
+      transform: translate(-50%, -50%)
+      opacity: 0
+      text:
+        align: center
+        transform: uppercase
+        shadow: 0 0 4px rgba(#000, .65)
+        font: bold 14px sans-serif
+      h4
+        color: rgba(255, 255, 255, 0.8)
+        font-size: 21px
+        text-align: center
+      p
+        color: rgba(255, 255, 255, 0.8)
+        text-align: center
 
-    img
-        +size(100% auto)
-        display: block
-        height: 300px
-
-    .item
-        width: 33%
-        margin: 0 1px 1px 0
-        float: left
-        position: relative
-        overflow: hidden
-
-        &:hover
-            img
-                transform: scale(1.25)
-                opacity: 0.8
-            //filter: blur(10px) // alternative to backdrop-filter
-
-            div
-                opacity: 1
-
-
-        &::before
-            content: ""
-            +position(absolute, 0 0 0 0)
-            z-index: 1
-
-
-        &:hover
-            &::before
-                backdrop-filter: blur(10px) saturate(120%)
-
-        &::after
-            content: ""
-            +size(75px)
-            +position(absolute, 50% null null 50%)
-            z-index: 2
-            transform: translate(-50%, -50%)
-            opacity: 0
-            cursor: pointer
-            &:hover
-                background: rgba(185, 218, 243, 0.8)
-        &:hover
-            &::after
-                opacity: 1
-
-        div
-            background-color: rgba(0, 0, 0, 0.51)
-            position: absolute
-            height: 100%
-            width: 100%
-            left: 188px
-            top: 150px
-            position: absolute
-            z-index: 3
-            transform: translate(-50%, -50%)
-            opacity: 0
-            text:
-                align: center
-                transform: uppercase
-                shadow: 0 0 4px rgba(#000, .65)
-            font: bold 14px sans-serif
-            h4
-                color: rgba(255, 255, 255, 0.8)
-                font-size: 21px
-            p
-                color: rgba(255, 255, 255, 0.8)
-            article
-                height: 65px
-                line-height: 60px
-                margin-top: 124px
-                background-color: rgba(0, 0, 0, 0.91)
-                a
-                    color: rgba(255, 255, 255, 0.8)
-                    transition: .3s
-                    &:hover
-                        text-decoration: none
-                        color: #b9daf3
+      article
+        height: 65px
+        line-height: 60px
+        margin-top: 70px
+        background-color: rgba(0, 0, 0, 0.9)
+        a
+          color: rgba(255, 255, 255, 0.8)
+          transition: .3s
+          font-size: 20px
+          &:hover
+            text-decoration: none
+            color: #b9daf3
 
 .middle__partners
-    background: rgba(142, 142, 142, 0.2)
-    padding-bottom: 110px
-    padding-top: 50px
-    h1
-        color: #424242
-        font-size: 30px
-        font-weight: 100
-        line-height: 40px
-        text-align: center
-    .partners
-        padding-left: 50px
-        padding-top: 20px
-        div
-            display: inline-block
-            margin-right: 50px
-            width: 164px
-        img
-            margin-left: 60px
+  background: #fafafa
+  padding-bottom: 110px
+  padding-top: 50px
+  h1
+    color: #424242
+    font-size: 50px
+    font-weight: 100
+    line-height: 40px
+    text-align: center
+  .partners
+    padding-left: 50px
+    padding-top: 70px
+    div
+      display: inline-block
+      margin-right: 50px
+      width: 164px
+      opacity: 0.5
+      &:hover
+        transition: .4s
+        opacity: 1
         p
-            color:  #8d9094
-            font-size: 13px
-            font-weight: 400
-            line-height: 40px
-            text-align: center
+          color: #000
+
+    img
+      margin-left: 45px
+      width: 70px
+
+    p
+      color: #8d9094
+      font-size: 16px
+      font-weight: 400
+      line-height: 40px
+      text-align: center
 
 .middle__service
-    background: rgba(142, 142, 142, 0.2)
-    h1
-        color:  #424242
-        font-size: 50px
-        font-weight: 100
+  background: #fafafa
+  h1
+    color: #424242
+    font-size: 50px
+    font-weight: 100
+    line-height: 40px
+    text-align: center
+  .service
+    padding-top: 50px
+    div
+      display: inline-block
+      height: 300px
+      width: 150px
+      margin-left: 170px
+      vertical-align: inherit
+      p
+        color: #7e8184
+        font-size: 15px
+        font-weight: 400
         line-height: 40px
         text-align: center
-    .service
-        padding-top: 50px
-        div
-            display: inline-block
-            height: 300px
-            width: 150px
-            margin-left: 170px
-            vertical-align: inherit
-            p
-                color:  #7e8184
-                font-size: 15px
-                font-weight: 400
-                line-height: 40px
-                text-align: center
-            img
-                margin-left: 23px
-            .mobile
-                margin-left: 44px
+      img
+        margin-left: 23px
+      .mobile
+        margin-left: 44px
+
+.tehnologies__middle
+  background: url('../img/technologies_fon.png')
+  background-repeat: round
+  padding-bottom: 70px
+  h1
+    color: #424242
+    font-size: 50px
+    font-weight: 100
+    line-height: 40px
+    text-align: center
+    padding-bottom: 50px
+
+.tehnologies
+  .r2d2
+    display: block
+    div
+      width: 25%
+      display: inline-block
+      margin-right: 92px
+    img
+      height: 70px
+    h5
+      color:  #727070
+      font-size: 16px
+      font-weight: 700
+      line-height: 15px
+      text-align: left
+    p
+      color:  #959393
+      font-size: 13px
+      font-weight: 400
+      line-height: 15px
+      text-align: left
+
+.middle__team
+  background: linear-gradient(-45deg, #dbddde 0%, #898c90 100%)
+  height: 400px
+  h1
+    color:  #424242
+    font-size: 50px
+    font-weight: 100
+    line-height: 40px
+    text-align: center
+    margin-bottom: 55px
+  .visitka
+    height: 100%
+    text-align: left
+    h2
+      color:  #727070
+      font-size: 30px
+      font-weight: 300
+      line-height: 30px
+    h5
+      color:  #959393
+      font-size: 20px
+      font-weight: 400
+      line-height: 30px
+    p
+      color:  #959393
+      font-size: 13px
+      font-weight: 400
+      line-height: 15px
+
+
+.slider_container
+  position: relative
+  margin-top: 6px
+
+.slide_item
+  background: none
+  width: 100%
+  height: 272px
+.photo_team
+  height: 100%
+  img
+    height: 175px
+    margin-left: 95px
+    margin-top: 25px
+.social
+  p
+    img
+      padding-right: 10px
+    a
+      color:  #727070
+      font-size: 13px
+      font-weight: 400
+      line-height: 15px
+      text-align: left
+      &:hover
+        text-decoration: none
+        color: #fff
+        transition: .4s
+
+.owl-item
+  width: 100%
+
+.owl-page 
+    height: 15px
+    border-radius: 50%
+    background: rgba(0, 0, 0, 0.7)
+    width: 15px
+    display: inline-block
+    margin-right: 5px
+    border: 1px solid #b9daf3
+
+.owl-pagination 
+    position: absolute
+    top: 225px
+    left: 45%
+    /* background: #000; */
+    z-index: 100
+
+.active
+    background: #b9daf3
+
+.send__bottom
+  background: url('../img/send-fon.png')
+  background-repeat: round
+  padding-bottom: 50px
+  article
+    p
+      color:  #fafafa
+      font-size: 50px
+      font-weight: 100
+      line-height: 40px
+    .send-or
+        p
+          color:  #fafafa
+          font-size: 25px
+          font-weight: 100
+          line-height: 90px
+          text-align: center
+.send-mess 
+    div 
+        p 
+            color: #fff
+
+
+#feedback-page
+  text-align: center
+
+
+
+.feedback-input
+  color: #3c3c3c
+  font-weight: 500
+  font-size: 18px
+  border-radius: 0
+  line-height: 22px
+  background-color: #fbfbfb
+  padding: 13px 13px 13px 54px
+  margin-bottom: 10px
+  width: 100%
+  box-sizing: border-box
+  border: 3px solid rgba(0, 0, 0, 0)
+  &:focus
+    background: #fff
+    box-shadow: 0
+    border: 3px solid #3498db
+    color: #3498db
+    outline: none
+    padding: 13px 13px 13px 54px
+
+.focused
+  color: #30aed6
+  border: #30aed6 solid 3px
+
+/* Icons ----------------------------------
+
+#name
+  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg)
+  background-size: 30px 30px
+  background-position: 11px 8px
+  background-repeat: no-repeat
+  &:focus
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg)
+    background-size: 30px 30px
+    background-position: 11px 8px
+    background-repeat: no-repeat
+
+#email
+  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg)
+  background-size: 30px 30px
+  background-position: 11px 8px
+  background-repeat: no-repeat
+  &:focus
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg)
+    background-size: 30px 30px
+    background-position: 11px 8px
+    background-repeat: no-repeat
+
+#comment
+  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg)
+  background-size: 30px 30px
+  background-position: 11px 8px
+  background-repeat: no-repeat
+
+textarea
+  width: 100%
+  height: 150px
+  line-height: 150%
+  resize: vertical
+
+input:hover, textarea:hover, input:focus, textarea:focus
+  background-color: white
+
+#button-blue
+  float: left
+  width: 100%
+  border: #fbfbfb solid 4px
+  cursor: pointer
+  background-color: #3498db
+  color: white
+  font-size: 24px
+  padding-top: 22px
+  padding-bottom: 22px
+  transition: all 0.3s
+  margin-top: -4px
+  font-weight: 700
+  &:hover
+    background-color: rgba(0, 0, 0, 0)
+    color: #0493bd
+
+.submit:hover
+  color: #3498db
+
+.ease
+  width: 0px
+  height: 74px
+  background-color: #fbfbfb
+  transition: .3s ease
+
+.submit:hover .ease
+  width: 100%
+  background-color: white
+
+            
+
+
+
 
 //ALWAYS END
 @import "media"
 @import "header"
 @import "section"
 @import "command"
+@import "owl_carousel"
+@import "font_awesome"

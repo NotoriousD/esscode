@@ -10,12 +10,20 @@ $(function() {
 		});
 	});
 
-        var owl = $(".carousel");
+	var owl = $(".carousel");
 	owl.owlCarousel({
 		items : 1,
-        autoHeight : true
+		autoHeight : true,
+		singleItem:true,
+		slideSpeed: 400,
+		autoPlay: 10000
 	});
-	
+	$(".next_button").click(function(){
+		owl.trigger("owl.next");
+	});
+	$(".prev_button").click(function(){
+		owl.trigger("owl.prev");
+	});
 
     
 	//SVG Fallback
